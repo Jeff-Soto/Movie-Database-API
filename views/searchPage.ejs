@@ -1,0 +1,21 @@
+<% include partials/header.ejs %>
+<div class="container">
+<h1 class="text-center text-success">Here are the results for '<%=searchTerm%>' :</h1>
+<hr>
+<div class="wrapper2">
+    <% parsedData["Search"].forEach(function(movie){ %>
+        <div class="thumbnail col-xs-12 col-sm-6 col-md-4">
+            <% if (movie.Poster !== "N/A"){ %>
+                <img src="<%=movie.Poster%>">
+            <% } else{ %>
+                <img src="/images/noIMG.png" alt="No Image Available">
+            <% } %>
+            <div class="caption">
+                <p><%= movie.Title%> - <%=movie.Year%></p>
+            </div>
+        </div>
+    <% }) %>
+</div>
+<p class="text-center"><a class="text-success" href="/">GO BACK</a></p>
+</div>
+<% include partials/footer.ejs %>

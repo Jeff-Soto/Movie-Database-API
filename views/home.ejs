@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+<div class="wrapper">
+    <h1 class="text-success text-center">Welcome to the Movie API Project</h1>
+    <p class="text-center">Simply search for a movie below</p>
+    <form class="form-inline" action="/results" method="GET">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="search" name="searchTerm">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="submit" value="Go">
+        </div>
+    </form>
+</div>
+<% include partials/footer.ejs %>
